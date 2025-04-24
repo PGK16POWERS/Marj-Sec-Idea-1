@@ -6,7 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.Toast
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.example.marjella_security_idea_1.models.login
+import com.example.marjella_security_idea_1.network.retrofitClient
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import retrofit2.HttpException
+import java.io.IOException
 
 class Login : Fragment() {
 
@@ -32,6 +41,35 @@ class Login : Fragment() {
         }
 
         return view
+    }
+
+    private fun loginFunc(email: String, password: String) {
+
+        val loginBody = login(
+            email = email,
+            password = password
+        )
+
+        lifecycleScope.launch {
+            try {
+                val response = withContext(Dispatchers.IO) {
+                    retrofitClient.apiService.login(loginBody)
+                }
+
+                val responseBody = response.body()
+
+                if ( responseBody != null && responseBody.status == 200 ) {
+                    Toast.makeText(requireContext(),"Its a fucking Glad bag",Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(requireContext(),"",Toast.LENGTH_SHORT).show()
+                }
+
+            } catch (e: IOException) {
+                Toast.makeText(requireContext(),"Network Connection error", Toast.LENGTH_SHORT).show()
+            } catch (e: HttpException) {
+                Toast.makeText(requireContext(),"Server Errors",Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
 }
