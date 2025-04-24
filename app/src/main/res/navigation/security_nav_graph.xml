@@ -9,4 +9,9 @@
         android:name="com.example.marjella_security_idea_1.Login"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/SIgn_up"
+        android:name="com.example.marjella_security_idea_1.SIgn_up"
+        android:label="fragment_s_ign_up"
+        tools:layout="@layout/fragment_s_ign_up" />
 </navigation>

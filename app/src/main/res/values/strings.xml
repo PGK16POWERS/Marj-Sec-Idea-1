@@ -17,5 +17,14 @@
     <string name="login">Login</string>
     <string name="or_login_with">Or login with</string>
     <string name="dont_have_a_account">Don\'t have an account?</string>
+
+
+    <!-- SIGN UP SCREEN -->
+    <string name="create_your_account">Create your account</string>
+    <string name="create_account">Create account</string>
     <string name="sign_up">Sign up</string>
+    <string name="or_sign_up_with">Or sign up with</string>
+    <string name="already_have_an_account">Already have an account?</string>
+
+
 </resources>
