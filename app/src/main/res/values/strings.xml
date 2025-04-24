@@ -8,7 +8,7 @@
     <string name="confirm_password">Confirm password</string>
     <string name="new_password">New password</string>
     <string name="confirm_new_password">Confirm new password</string>
-    <string name="confirm_code">confirm_code</string>
+    <string name="confirm_code">confirm code</string>
     <string name="enter_code_sent_to_email">Enter code sent to Email</string>
     <string name="back">Back</string>
 
@@ -37,5 +37,11 @@
     <!-- UPDATE YOUR PASSWORD -->
     <string name="update_your_password">Update your password</string>
     <string name="update_password">Update password</string>
+
+    <!-- VERIFY LOGIN DETAILS -->
+    <string name="verify_login_details">Verify login details</string>
+
+    <!-- VERIFY SIGN DETAILS -->
+    <string name="verify_sign_up_details">Verify Sign-up details</string>
 
 </resources>

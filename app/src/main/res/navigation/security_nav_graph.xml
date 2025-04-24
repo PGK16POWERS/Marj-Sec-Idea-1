@@ -19,4 +19,9 @@
         android:name="com.example.marjella_security_idea_1.Forgot_password"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password" />
+    <fragment
+        android:id="@+id/update_password"
+        android:name="com.example.marjella_security_idea_1.Update_password"
+        android:label="fragment_update_password"
+        tools:layout="@layout/fragment_update_password" />
 </navigation>
