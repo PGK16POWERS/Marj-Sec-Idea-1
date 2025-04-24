@@ -3,145 +3,326 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="25dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="25dp"
+    android:paddingBottom="30dp"
     android:background="@color/white"
     android:orientation="vertical"
     tools:context=".Login">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/security_idea_1_marj_logo"
-            android:contentDescription="@string/app_name"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/security_idea_1_marj_wording"
-            android:contentDescription="@string/app_name"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:elegantTextHeight="true"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            android:text="@string/login_to_account"
-            android:fontFamily="@font/poppins_medium"/>
-
-        <!-- INPUT PARENT -->
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_max="350dp">
 
-            <!-- INPUT CHILD -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:background="@drawable/input_bg"
-                android:elevation="2dp"
-                android:fadingEdge="none"
-                android:requiresFadingEdge="none">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/security_idea_1_marj_logo" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:elegantTextHeight="true"
-                    android:background="@android:color/transparent"
-                    android:textColor="@color/black"
-                    android:hint="@string/email"
-                    android:textColorHint="@color/black"
-                    android:textSize="14sp"/>
-
-            </LinearLayout>
-
-            <!-- INPUT CHILD -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:background="@drawable/input_bg"
-                android:elevation="2dp"
-                android:fadingEdge="none"
-                android:requiresFadingEdge="none">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:elegantTextHeight="true"
-                    android:background="@android:color/transparent"
-                    android:textColor="@color/black"
-                    android:hint="@string/password"
-                    android:textColorHint="@color/black"
-                    android:textSize="14sp"/>
-
-            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/security_idea_1_marj_wording" />
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/login_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintWidth_max="450dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:elegantTextHeight="true"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/login_to_account"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <!-- INPUT PARENT -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- INPUT CHILD -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/input_bg"
+                    android:elevation="2dp"
+                    android:fadingEdge="none"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="10dp"
+                    android:requiresFadingEdge="none">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:elegantTextHeight="true"
+                        android:fontFamily="@font/poppins_medium"
+                        android:autofillHints="emailAddress"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/black"
+                        android:textColorHint="#A7A7A7"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <!-- INPUT CHILD -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/input_bg"
+                    android:elevation="2dp"
+                    android:fadingEdge="none"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="10dp"
+                    android:requiresFadingEdge="none">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:elegantTextHeight="true"
+                        android:fontFamily="@font/poppins_medium"
+                        android:autofillHints="password"
+                        android:hint="@string/password"
+                        android:inputType="textVisiblePassword"
+                        android:textColor="@color/black"
+                        android:textColorHint="#A7A7A7"
+                        android:textSize="14sp"
+                        tools:ignore="SmallSp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/forgot_password_redirect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center|end"
+                android:orientation="horizontal"
+                android:paddingStart="0dp"
+                android:paddingEnd="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/forgot_password"
+                    android:textColor="#B0B0B0"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:elegantTextHeight="true"
+                android:fontFamily="@font/poppins_medium"
+                android:background="@drawable/blue_button"
+                android:requiresFadingEdge="none"
+                android:stateListAnimator="@null"
+                android:text="@string/login"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <!-- REDIRECT PARENT -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/redirect_to_sign_up"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!-- OR LOGIN WITH PARENT -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/or_login_with"
+                    android:textColor="#B0B0B0"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/line" />
+
+            </LinearLayout>
+
+            <!-- REDIRECT CHILDREN-PARENT -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:weightSum="9">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/input_bg"
+                    android:elevation="2dp"
+                    android:fadingEdge="none"
+                    android:gravity="center|center"
+                    android:orientation="horizontal"
+                    android:requiresFadingEdge="none">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/facebook" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/input_bg"
+                    android:elevation="2dp"
+                    android:fadingEdge="none"
+                    android:gravity="center|center"
+                    android:orientation="horizontal"
+                    android:requiresFadingEdge="none">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/google" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/input_bg"
+                    android:elevation="2dp"
+                    android:fadingEdge="none"
+                    android:gravity="center|center"
+                    android:orientation="horizontal"
+                    android:requiresFadingEdge="none">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/_4" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/redirect_to_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|center"
             android:orientation="horizontal"
-            android:layout_marginTop="5dp"
-            android:paddingEnd="8dp"
-            android:paddingStart="0dp"
-            android:gravity="center|end">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/forgot_password"
+                android:layout_marginEnd="6dp"
                 android:elegantTextHeight="true"
-                android:textSize="14sp"
                 android:fontFamily="@font/poppins_medium"
-                android:textColor="#777777"/>
+                android:text="@string/dont_have_a_account"
+                android:textColor="#B0B0B0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elegantTextHeight="true"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/sign_up"
+                android:textColor="#1339F4" />
 
         </LinearLayout>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/blue_button"
-            android:text="@string/login"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:requiresFadingEdge="none"
-            android:stateListAnimator="@null"/>
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
