@@ -21,9 +21,9 @@ class Login : Fragment() {
 
         createAccountRedirect = view.findViewById(R.id.redirect_to_sign_up);
 
-        createAccountRedirect.setOnClickListener { _ -> {
+        createAccountRedirect.setOnClickListener { _ ->
             findNavController().navigate(R.id.SIgn_up)
-        } }
+        }
 
         return view
     }
