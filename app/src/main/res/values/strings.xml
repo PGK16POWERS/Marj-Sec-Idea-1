@@ -10,6 +10,7 @@
     <string name="confirm_new_password">Confirm new password</string>
     <string name="confirm_code">confirm_code</string>
     <string name="enter_code_sent_to_email">Enter code sent to Email</string>
+    <string name="back">Back</string>
 
     <!-- LOGIN SCREEN -->
     <string name="login_to_account">Login to account</string>
@@ -26,5 +27,15 @@
     <string name="or_sign_up_with">Or sign up with</string>
     <string name="already_have_an_account">Already have an account?</string>
 
+    <!-- FORGOT PASSWORD -->
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="recover_account">Recover account</string>
+    <string name="fp_paragraph">
+        Type in your email address and a link to update your password will be sent if theres an account registered  with the email received below.
+    </string>
+
+    <!-- UPDATE YOUR PASSWORD -->
+    <string name="update_your_password">Update your password</string>
+    <string name="update_password">Update password</string>
 
 </resources>

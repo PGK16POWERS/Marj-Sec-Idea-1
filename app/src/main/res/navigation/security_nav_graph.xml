@@ -14,4 +14,9 @@
         android:name="com.example.marjella_security_idea_1.SIgn_up"
         android:label="fragment_s_ign_up"
         tools:layout="@layout/fragment_s_ign_up" />
+    <fragment
+        android:id="@+id/forgot_password"
+        android:name="com.example.marjella_security_idea_1.Forgot_password"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" />
 </navigation>
