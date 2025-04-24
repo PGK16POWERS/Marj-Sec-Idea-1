@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="25dp"
+    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".Login">
 
     <LinearLayout
@@ -24,6 +26,46 @@
             android:layout_marginTop="16dp"
             android:src="@drawable/security_idea_1_marj_wording"
             android:contentDescription="@string/app_name"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elegantTextHeight="true"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:text="@string/login_to_account"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <!-- INPUT PARENT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- INPUT CHILD -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/input_bg"
+                android:elevation="1dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 

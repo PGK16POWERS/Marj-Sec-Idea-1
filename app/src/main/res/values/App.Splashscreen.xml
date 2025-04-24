@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="App.Splashscreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenIconBackgroundColor">@color/dom_blue</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/security_idea_1_splashscreen</item>
+        <item name="postSplashScreenTheme">@style/Theme.Marjella_security_idea_1</item>
+    </style>
+</resources>
