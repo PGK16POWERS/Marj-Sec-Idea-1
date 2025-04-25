@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config xmlns:android="http://schemas.android.com/apk/res/android">
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">192.168.101.250</domain>
-        <port>7000</port>
+        <domain includeSubdomains="true">192.168.101.249</domain>
+        <port>7600</port>
     </domain-config>
 </network-security-config>

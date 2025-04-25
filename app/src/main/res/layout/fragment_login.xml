@@ -89,6 +89,7 @@
                     android:requiresFadingEdge="none">
 
                     <EditText
+                        android:id="@+id/email_input_field"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
@@ -121,6 +122,7 @@
                     android:requiresFadingEdge="none">
 
                     <EditText
+                        android:id="@+id/password_input_field"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
@@ -152,10 +154,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elegantTextHeight="true"
-                    android:fontFamily="@font/poppins_medium"
                     android:text="@string/forgot_password"
                     android:textColor="#B0B0B0"
-                    android:textSize="14sp" />
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
@@ -164,9 +165,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_marginTop="12dp"
+                android:background="@drawable/blue_button"
                 android:elegantTextHeight="true"
                 android:fontFamily="@font/poppins_medium"
-                android:background="@drawable/blue_button"
                 android:requiresFadingEdge="none"
                 android:stateListAnimator="@null"
                 android:text="@string/login"
@@ -204,10 +205,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elegantTextHeight="true"
-                    android:fontFamily="@font/poppins_medium"
                     android:text="@string/or_login_with"
                     android:textColor="#B0B0B0"
-                    android:textSize="14sp" />
+                    android:textSize="12sp" />
 
                 <View
                     android:layout_width="30dp"
@@ -309,7 +309,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="6dp"
                 android:elegantTextHeight="true"
-                android:fontFamily="@font/poppins_medium"
+                android:textSize="12sp"
                 android:text="@string/dont_have_a_account"
                 android:textColor="#B0B0B0" />
 
@@ -318,6 +318,7 @@
                 android:layout_height="wrap_content"
                 android:elegantTextHeight="true"
                 android:fontFamily="@font/poppins_medium"
+                android:textSize="12sp"
                 android:text="@string/sign_up"
                 android:textColor="#1339F4" />
 
