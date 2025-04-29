@@ -44,6 +44,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.core.splashscreen)
+    implementation(libs.converter.scalars)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     testImplementation(libs.junit)
