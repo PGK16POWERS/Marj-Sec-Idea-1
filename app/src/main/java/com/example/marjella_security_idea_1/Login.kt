@@ -77,7 +77,9 @@ class Login : Fragment() {
         })
 
         loginButton.setOnClickListener { _ ->
+
             loginFunc()
+
         }
 
         return view
@@ -85,9 +87,10 @@ class Login : Fragment() {
 
     private fun loginFunc() {
 
+
         val loginBody = Login(
-            email = inputedEmail,
-            password = inputedPassword
+            email = "suprememazibuko@gmail.com",
+            password = "inputedPassword"
         )
 
         lifecycleScope.launch {
@@ -98,26 +101,24 @@ class Login : Fragment() {
 
                 val responseBody = response.body()
 
-                if ( responseBody != null && responseBody.status == 200 ) {
-                    Toast.makeText(requireContext(),"Its a fucking Glad bag",Toast.LENGTH_SHORT).show()
+                if (responseBody?.status == 200) {
+                    val message = response.body()
+                    Toast.makeText(requireContext(), responseBody.message, Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(requireContext(),"Bad apple",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "", Toast.LENGTH_SHORT).show()
                 }
 
             } catch (e: IOException) {
-                Toast.makeText(requireContext(),"Network Connection error", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Network Connection error", Toast.LENGTH_SHORT).show()
             } catch (e: HttpException) {
-                Toast.makeText(requireContext(),"Server Errors",Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Server error: ${e.message}", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
+
     private fun checkFormValidity() {
-        if (emailInputField.isDirty && passwordInputField.isDirty) {
-            loginButton.isEnabled = true
-        } else {
-            loginButton.isEnabled = false
-        }
+
     }
 
 }
