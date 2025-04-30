@@ -10,6 +10,8 @@
     android:paddingBottom="30dp"
     android:background="@color/white"
     android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
     tools:context=".SIgn_up">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -89,6 +91,7 @@
                     android:requiresFadingEdge="none">
 
                     <EditText
+                        android:id="@+id/email_input"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
@@ -121,6 +124,7 @@
                     android:requiresFadingEdge="none">
 
                     <EditText
+                        android:id="@+id/password_input"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
@@ -154,6 +158,7 @@
                     android:requiresFadingEdge="none">
 
                     <EditText
+                        android:id="@+id/confirm_password_input"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
@@ -172,7 +177,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/login_button"
+                android:id="@+id/create_account_button"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_marginTop="12dp"

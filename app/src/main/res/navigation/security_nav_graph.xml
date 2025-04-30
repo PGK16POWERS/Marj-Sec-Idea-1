@@ -24,4 +24,9 @@
         android:name="com.example.marjella_security_idea_1.Update_password"
         android:label="fragment_update_password"
         tools:layout="@layout/fragment_update_password" />
+    <fragment
+        android:id="@+id/verify_login"
+        android:name="com.example.marjella_security_idea_1.Verify_login"
+        android:label="fragment_verify_login"
+        tools:layout="@layout/fragment_verify_login" />
 </navigation>
