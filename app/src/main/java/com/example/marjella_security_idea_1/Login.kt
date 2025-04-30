@@ -31,6 +31,7 @@ class Login : Fragment() {
 
     var inputedEmail = ""
     var inputedPassword = ""
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -44,8 +45,17 @@ class Login : Fragment() {
         passwordInputField = view.findViewById(R.id.password_input_field)
         loginButton = view.findViewById(R.id.login_button)
 
+        val fragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+
+        fragmentTransaction.setCustomAnimations (
+            R.anim.fragment_enter,
+            R.anim.fragment_exit
+        )
+
         createAccountRedirect.setOnClickListener { _ ->
-            findNavController().navigate(R.id.SIgn_up)
+            fragmentTransaction.replace(R.id.nav_host_container, SIgn_up())
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
         }
 
         forgotPassword.setOnClickListener { _ ->
@@ -59,7 +69,6 @@ class Login : Fragment() {
 
             override fun afterTextChanged(s: Editable?) {
                 inputedEmail = s.toString()
-                checkFormValidity()
             }
 
         })
@@ -71,26 +80,28 @@ class Login : Fragment() {
 
             override fun afterTextChanged(s: Editable?) {
                 inputedPassword = s.toString()
-                checkFormValidity()
             }
 
         })
 
         loginButton.setOnClickListener { _ ->
 
-            loginFunc()
+            if (inputedEmail.isEmpty() || inputedPassword.isEmpty()) {
+                Toast.makeText(requireContext(), "Form is incomplete", Toast.LENGTH_SHORT).show()
+            } else {
+                loginFunc(inputedEmail, inputedPassword)
+            }
 
         }
 
         return view
     }
 
-    private fun loginFunc() {
-
+    private fun loginFunc(email: String, password: String) {
 
         val loginBody = Login(
-            email = "suprememazibuko@gmail.com",
-            password = "inputedPassword"
+            email = email,
+            password = password
         )
 
         lifecycleScope.launch {
@@ -105,7 +116,7 @@ class Login : Fragment() {
                     val message = response.body()
                     Toast.makeText(requireContext(), responseBody.message, Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(requireContext(), "", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
                 }
 
             } catch (e: IOException) {
