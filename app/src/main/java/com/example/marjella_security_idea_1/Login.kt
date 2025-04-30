@@ -115,6 +115,8 @@ class Login : Fragment() {
                 if (responseBody?.status == 200) {
                     val message = response.body()
                     Toast.makeText(requireContext(), responseBody.message, Toast.LENGTH_SHORT).show()
+
+                    findNavController().navigate(R.id.verify_login)
                 } else {
                     Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
                 }
